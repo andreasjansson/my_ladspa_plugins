@@ -17,6 +17,13 @@
  * 
  */
 
+/**
+ * This simple FIR filter adds dips in the frequency response at odd
+ * multiples of some initial frequency. It comes with both a mono
+ * and a stereo version. In the stereo version you can have separate
+ * configurations for the two channels.
+ */
+
 #include <stdlib.h>
 #include <string.h>
 
