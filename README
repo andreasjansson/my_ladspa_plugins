@@ -1,0 +1,22 @@
+ _____________________
+/\                    \
+\_| my_ladspa_plugins |
+  |   ________________|_
+   \_/__________________/
+
+
+I'm working my way through Ken Steiglitz' A Digital Signal Processing
+Primer, and I wanted some practise to go with the theory.
+
+To use these plugins, first you'll need to install LADSPA from
+here: http://www.ladspa.org/. Then you need to compile the plugins
+(I might create a makefile in the future). On my system (Ubuntu 10.10)
+this works:
+
+gcc -shared -fPIC -lm -O4 -o PLUGIN_NAME.so -ldl -Wall PLUGIN_NAME.c
+
+Then, move them to the ladspa plugins directory. On Ubuntu this is
+/usr/lib/ladspa/. Now programs like Audacity should recognise the
+new plugins automatically.
+
+Writing LADSPA plugins is dead easy, and it's quite fun. Give it a go!
