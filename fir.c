@@ -29,10 +29,6 @@
 
 #include "ladspa.h"
 
-#ifndef MIN
-#define MIN(x, y) (((x) < (y)) ? (x) : (y))
-#endif
-
 #define MIN_FREQ 1
 
 // The port numbers for the plugin
