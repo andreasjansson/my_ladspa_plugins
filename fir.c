@@ -37,10 +37,10 @@
 #define INPUT_L        2
 #define OUTPUT_L       3
 
-#define INPUT_R        4
-#define OUTPUT_R       5
-#define FREQ_CONTROL_R 6
-#define WET_CONTROL_R  7
+#define FREQ_CONTROL_R 4
+#define WET_CONTROL_R  5
+#define INPUT_R        6
+#define OUTPUT_R       7
 
 LADSPA_Descriptor *mono_descriptor = NULL;
 LADSPA_Descriptor *stereo_descriptor = NULL;
