@@ -127,8 +127,6 @@ inline void run_filter(LADSPA_Handle instance, unsigned long sample_count,
 
     // add the current input sample to the previous output sample,
     // times a coefficient. normalise so that peak amplitude is always 1.
-    // the multiplication by powf(fabs(1 - coef_l), 2) is probaby wrong -
-    // i'll come back to that later.
     *output_l = *input_l * (1 - fabs(coef_l)) +
       filter->previous_sample_l * coef_l;
 
