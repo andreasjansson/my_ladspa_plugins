@@ -156,8 +156,8 @@ void connect_port_to_filter(LADSPA_Handle instance,
 /**
  * This is where the action happens.
  */
-void run_filter(LADSPA_Handle instance, unsigned long sample_count,
-                int stereo)
+inline void run_filter(LADSPA_Handle instance, unsigned long sample_count,
+                       int stereo)
 {
   LADSPA_Data *input_l;
   LADSPA_Data *input_r = NULL;

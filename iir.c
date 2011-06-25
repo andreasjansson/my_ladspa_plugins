@@ -1,5 +1,5 @@
 /* 
- * iir.c - A simple one-term finite impulse response filter
+ * iir.c - A simple one-pole infinite impulse response filter
  * Copyright (C) 2011  Andreas Jansson <andreas@jansson.me.uk>
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -28,8 +28,6 @@
 #include <string.h>
 
 #include "ladspa.h"
-
-#define MIN_FREQ 1
 
 // The port numbers for the plugin
 #define COEF_CONTROL_L 0
