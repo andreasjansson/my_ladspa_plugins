@@ -183,8 +183,6 @@ inline void filter_channel(LADSPA_Data *input, LADSPA_Data *output,
   loop_delay = floor(delay - .5);
   phase_delay = delay - (loop_delay + .5);
 
-  printf("%f\n", phase_delay);
-  
   a = (sin(1 - phase_delay) * freq_rad / 2) /
     (sin(1 + phase_delay) * freq_rad / 2);
 
@@ -193,8 +191,7 @@ inline void filter_channel(LADSPA_Data *input, LADSPA_Data *output,
     w = *input * (1 - pow(sharpness, loop_delay)) +
       pow(sharpness, loop_delay) * *(history + history_position);
 
-    //    v = a * w + *previous_w - a * *previous_v;
-    v = w;
+    v = a * w + *previous_w - a * *previous_v;
 
     *output = (v + *previous_v) / 2;
 
